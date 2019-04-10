@@ -14,6 +14,8 @@
 // underlying character, updating the stored boolean value to true if it was 
 // guessed correctly
 
+
+
 var Letter = function(letter) {
     this.letter = letter;
     this.guessed = false;
@@ -21,12 +23,21 @@ var Letter = function(letter) {
         if (this.guessed === true) {
             return this.letter;
         } else {
-            return "_";
+            console.log("_");
         }
     };
     this.checks = function() {
         if (userGuess === this.letter) {
             this.guessed = true;
+            console.log("you got it")
+        } else {
         }
     }
 }
+
+var a = new Letter("a");
+
+
+
+module.exports = Letter;
+
